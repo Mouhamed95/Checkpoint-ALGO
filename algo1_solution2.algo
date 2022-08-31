@@ -1,0 +1,37 @@
+Algorithme table de Hachage
+VAR
+    htab1:HASH_TABLE <INTEGER,INTEGER>
+    hatb2: HASH_TABLE<INTEGER,INTEGER>
+     some,i,j,element:INTEGER
+    BEGIN
+    
+    some:=0
+    htab1.insert(0,3)
+    htab1.insert(1,1)
+    htab1.insert(2,7)
+    htab1.insert(3,9)
+    
+    htab2.insert(0,2)
+    htab2.insert(1,4)
+    htab2.insert(2,1)
+    htab2.insert(3,9)
+    htab2.insert(4,3)
+
+
+    FOR i FROM 0 TO htab1.length STEP 1  DO
+        element:=htab1.get(i)
+        IF (htab2.search(element)===false) THEN
+            some:=some+element
+        END_IF
+    END_FOR
+    FOR j FROM 0 TO hatb2.length STEP 1  DO
+        element:=htab2.get(i)
+        IF (htab1.search(element)===false) THEN
+            some:=some+element
+        END_IF
+    END_FOR
+     WRITE('ecrire la somme des elements :' somme)
+
+
+
+    END

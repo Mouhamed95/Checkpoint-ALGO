@@ -1,0 +1,21 @@
+ALGORITHME EXEMPLE-2
+VAR
+ jeu1,jeu2:ARRAY_OF INTEGER [1...100]
+  some,i,j:INTEGER
+BEGIN
+    some,i,j:=0
+    jeu1:=[12,13,6,10]
+    jeu2:=[13,10,16,15]
+    FOR i FROM 0 TO jeu1.length-1 STEP 1  DO
+        FOR j FROM 0 TO jeu2.length-1 STEP 1  DO
+            IF (jeu1[i]=jeu2[j]) THEN
+               some=some+(jeu1[i]*2) 
+            END_IF
+        END_FOR
+    END_FOR
+    WRITE('la somme des meme elements :' somme)
+    
+
+
+
+END
